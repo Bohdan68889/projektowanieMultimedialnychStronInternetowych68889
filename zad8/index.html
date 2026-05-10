@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Bohdan Bodnar 68889</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="red">
+    <div class="container">
+        <header>
+            <h1>Bohdan Bodnar</h1>
+            <p>Student Informatyki | ID: 68889</p>
+            <p>Warszawa | +48 575 454 061 | bohdan5bodnar@gmail.com</p>
+        </header>
+
+        <button id="themeBtn">Zmień motyw</button>
+        <button id="toggleBtn">Pokaż / Ukryj doświadczenie</button>
+
+        <main>
+            <section>
+                <h2>Profil Zawodowy</h2>
+                <p id="profil-tekst"></p>
+            </section>
+
+            <section>
+                <h2>Wykształcenie</h2>
+                <p id="wyksztalcenie-tekst"></p>
+            </section>
+
+            <section id="doswiadczenie">
+                <h2>Doświadczenie Zawodowe</h2>
+                <ul id="lista-doswiadczenie"></ul>
+            </section>
+
+            <section>
+                <h2>Umiejętności</h2>
+                <ul id="lista-umiejetnosci"></ul>
+            </section>
+
+            <section>
+                <h2>Projekty (Local Storage)</h2>
+                <div class="ls-control">
+                    <input type="text" id="inputProjekt" placeholder="Nazwa projektu">
+                    <button id="addBtn">Dodaj</button>
+                </div>
+                <ul id="listaProjektow"></ul>
+            </section>
+
+            <section>
+                <h2>Kontakt</h2>
+                <form id="form">
+                    <input type="text" id="imie" placeholder="Imię">
+                    <input type="text" id="nazwisko" placeholder="Nazwisko">
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea id="wiadomosc" placeholder="Wiadomość"></textarea>
+                    <button type="submit">Wyślij</button>
+                    <p id="error"></p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Autor: B.B. 68889</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
