@@ -105,21 +105,20 @@ form.addEventListener("submit", async function(e) {
     error.textContent = "Wysyłanie...";
 
     try {
-        const response = await fetch("https://webhook.site/ac6dbeef-3f58-4d91-a161-6a7b890f6479", {
+        await fetch("https://webhook.site/ac6dbeef-3f58-4d91-a161-6a7b890f6479", {
             method: "POST",
+            mode: "no-cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
         });
 
-        if (response.ok) {
-            error.style.color = "green";
-            error.textContent = "Wysłano!";
-            form.reset(); 
-        } else {
-            throw new Error("Błąd");
-        }
+        // Тепер код дійде сюди без помилок
+        error.style.color = "green";
+        error.textContent = "Wysłano!";
+        form.reset(); 
     } catch (err) {
         error.style.color = "red";
-        error.textContent = "Błąd!";
+        error.textContent = "Błąd połączenia!";
+        console.error("Szczegóły błędu:", err);
     }
 });
