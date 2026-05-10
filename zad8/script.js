@@ -112,13 +112,11 @@ form.addEventListener("submit", async function(e) {
             body: JSON.stringify(formData)
         });
 
-        // Тепер код дійде сюди без помилок
         error.style.color = "green";
         error.textContent = "Wysłano!";
         form.reset(); 
     } catch (err) {
         error.style.color = "red";
-        error.textContent = "Błąd połączenia!";
-        console.error("Szczegóły błędu:", err);
+        error.textContent = "Błąd!";
     }
 });
